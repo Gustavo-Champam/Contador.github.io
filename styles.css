@@ -1,0 +1,165 @@
+/* Reset de margens e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo do corpo */
+body {
+  background: linear-gradient(135deg, #ff7f50, #ff99cc, #ffb6c1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #000;
+  text-align: center;
+  overflow: hidden; /* Remove rolagem vertical */
+}
+
+/* Container centralizado */
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Foto com bordas arredondadas e sombra suave */
+.photo {
+  width: 100%;
+  height: 100vh; /* Foto ocupa 100% da altura da tela */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garantir que a imagem cubra toda a área sem deformação */
+  object-position: center; /* Ajuste a posição da imagem para que o centro da imagem seja sempre visível */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Título com cor romântica */
+.content h1 {
+  font-size: 2.5em;
+  color: #ff6f61;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Texto introdutório */
+.intro {
+  font-size: 1.2em;
+  color: #000;
+  margin-bottom: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Estilo do timer */
+.timer h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+.time-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 1.5em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.time-box span {
+  margin: 0 8px;
+}
+
+.time-box span:first-child {
+  color: #ff6f61;
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+/* Música: controles mais bonitos */
+.music audio {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #ff6f61;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animações suaves */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+body {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2em;
+  }
+
+  .intro {
+    font-size: 1em;
+    max-width: 90%;
+  }
+
+  .time-box {
+    font-size: 1.2em;
+    padding: 10px 15px;
+  }
+
+  .timer h2 {
+    font-size: 1.5em;
+  }
+
+  .photo {
+    height: 45vh; /* Ajuste a altura da foto em telas menores */
+  }
+
+  .container {
+    padding: 15px;
+    height: auto; /* Ajuste a altura para que o conteúdo caiba melhor */
+  }
+}
+
+@media (max-width: 480px) {
+  .photo {
+    height: 40vh; /* Foto ocupa 40% da altura da tela em dispositivos muito pequenos */
+  }
+
+  .time-box {
+    font-size: 1.1em;
+  }
+
+  .content h1 {
+    font-size: 1.8em;
+  }
+}
