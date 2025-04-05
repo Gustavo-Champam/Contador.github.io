@@ -1,5 +1,4 @@
-// Defina aqui a data do início do relacionamento
-const startDate = new Date("2024-08-02T00:00:00"); // Data de início do relacionamento
+const startDate = new Date("2024-08-02T00:00:00");
 
 function updateTimer() {
   const now = new Date();
@@ -18,6 +17,5 @@ function updateTimer() {
   document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
 }
 
-// Atualiza o contador a cada segundo
 setInterval(updateTimer, 1000);
 updateTimer();
