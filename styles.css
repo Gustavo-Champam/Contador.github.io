@@ -1,4 +1,3 @@
-/* Reset de margens e padding */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/* Estilo do corpo */
 body {
   background: linear-gradient(135deg, #ff7f50, #ff99cc, #ffb6c1);
   display: flex;
@@ -15,10 +13,10 @@ body {
   height: 100vh;
   color: #000;
   text-align: center;
-  overflow: hidden; /* Remove rolagem vertical */
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Container centralizado */
 .container {
   max-width: 600px;
   width: 100%;
@@ -33,10 +31,9 @@ body {
   overflow: hidden;
 }
 
-/* Foto com bordas arredondadas e sombra suave */
 .photo {
   width: 100%;
-  height: 100vh; /* Foto ocupa 100% da altura da tela */
+  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -46,13 +43,12 @@ body {
 .photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Garantir que a imagem cubra toda a área sem deformação */
-  object-position: center; /* Ajuste a posição da imagem para que o centro da imagem seja sempre visível */
+  object-fit: cover;
+  object-position: center;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Título com cor romântica */
 .content h1 {
   font-size: 2.5em;
   color: #ff6f61;
@@ -60,7 +56,6 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Texto introdutório */
 .intro {
   font-size: 1.2em;
   color: #000;
@@ -69,7 +64,6 @@ body {
   margin: 0 auto;
 }
 
-/* Estilo do timer */
 .timer h2 {
   font-size: 1.8em;
   margin-bottom: 20px;
@@ -99,7 +93,6 @@ body {
   font-size: 1.8em;
 }
 
-/* Música: controles mais bonitos */
 .music audio {
   width: 100%;
   margin-top: 20px;
@@ -110,17 +103,11 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Animações suaves */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
-body {
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* Responsividade para dispositivos menores */
 @media (max-width: 768px) {
   .content h1 {
     font-size: 2em;
@@ -141,18 +128,18 @@ body {
   }
 
   .photo {
-    height: 45vh; /* Ajuste a altura da foto em telas menores */
+    height: 45vh;
   }
 
   .container {
     padding: 15px;
-    height: auto; /* Ajuste a altura para que o conteúdo caiba melhor */
+    height: auto;
   }
 }
 
 @media (max-width: 480px) {
   .photo {
-    height: 40vh; /* Foto ocupa 40% da altura da tela em dispositivos muito pequenos */
+    height: 40vh;
   }
 
   .time-box {
