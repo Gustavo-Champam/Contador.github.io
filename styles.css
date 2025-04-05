@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: #333;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+.photo img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8em;
+  color: #ff6f91;
+  margin-top: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  animation: floatUp 1s ease both;
+}
+
+.intro {
+  font-size: 1.1em;
+  margin-top: 10px;
+  color: #444;
+  animation: floatUp 1.2s ease both;
+}
+
+.music {
+  margin-top: 20px;
+}
+
+#toggleMusic {
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+#toggleMusic:hover {
+  background-color: #e05577;
+}
+
+.music audio {
+  display: none;
+}
+
+.timer h2 {
+  margin-top: 30px;
+  font-size: 1.6em;
+  color: #ff6f91;
+  font-weight: 600;
+  animation: floatUp 1.3s ease both;
+}
+
+.time-box {
+  display: inline-block;
+  background: #ffe4ec;
+  padding: 14px 20px;
+  margin: 10px 6px;
+  border-radius: 12px;
+  font-size: 1.1em;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease-in-out;
+  animation: floatUp 1.4s ease both;
+}
+
+.time-box:hover {
+  transform: scale(1.05);
+}
+
+.time-box span:first-child {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #d6336c;
+  margin-right: 6px;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #999;
+  animation: floatUp 1.5s ease both;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .photo img {
+    max-height: 220px;
+  }
+
+  .container {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 2.3em;
+  }
+
+  .intro {
+    font-size: 1em;
+  }
+
+  .time-box {
+    font-size: 1em;
+    padding: 10px 14px;
+  }
+
+  .timer h2 {
+    font-size: 1.4em;
+  }
+}
